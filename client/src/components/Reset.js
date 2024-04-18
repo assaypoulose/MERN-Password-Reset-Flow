@@ -13,7 +13,7 @@ export default function Reset() {
 
   const { username } = useAuthStore(state => state.auth);
   const navigate = useNavigate();
-  const [{ isLoading, apiData, status, serverError }] = useFetch('createResetSession')
+  const [{ isLoading, status, serverError }] = useFetch('createResetSession')
 
   const formik = useFormik({
     initialValues : {
